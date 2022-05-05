@@ -14,3 +14,19 @@ a {
 * {
   box-sizing: border-box;
 }
+.bug{
+  background: #aedf78;
+}
+
+.water{
+  background: #33ccff;
+}
+.grass{
+  background: #00ca91;
+}
+.fire{
+  background: #e85c42;
+}
+.normal{
+  background: #a5a5a5;
+}

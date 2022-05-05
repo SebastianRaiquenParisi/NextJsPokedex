@@ -11,9 +11,10 @@ export default function Home({arrayPokemonLimpio}) {
     {arrayPokemonLimpio.map((pokemon, index) =>{
       return(
         <li>
-          <Link href="">
+          <Link href="/">
           <a>
-              <div className={styles.card}>
+              <div className={`${styles.card} 
+              ${pokemon.types[0].type.name}`}>
                 <div className={styles.nombreTipos}>
                   <h3>{pokemon.name}</h3>
                   <div className={styles.tipos}>
@@ -55,7 +56,7 @@ export async function getServerSideProps(){
       {
         id : pokemon.id,
         name : pokemon.name,
-        image: pokemon.sprites.front_default,
+        image: pokemon.sprites.other.dream_world.front_default,
         types: pokemon.types
       }
     )
