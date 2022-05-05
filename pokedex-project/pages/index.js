@@ -15,7 +15,8 @@ export default function Home({arrayPokemonLimpio}) {
           <a>
               <div className={styles.card}>
                 <div className={styles.nombreTipos}>
-                  <div>
+                  <h3>{pokemon.name}</h3>
+                  <div className={styles.tipos}>
                     {pokemon.types.map((tipo,index)=>{
                       return (
                         <p className={styles.tipo}>{tipo.type.name}</p>
@@ -23,6 +24,7 @@ export default function Home({arrayPokemonLimpio}) {
                     })}
                   </div>
                 </div>
+                <img src={pokemon.image} height="100" width={100} className={styles.imagen}></img>
               </div>
           </a>
           </Link>
