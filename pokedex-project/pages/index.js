@@ -1,11 +1,35 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
+import Link from 'next/link'
 
 export default function Home({arrayPokemonLimpio}) {
   console.log("arrayPokemon", arrayPokemonLimpio)
   return (
    <>
+   <ul className={styles.columnas}>
+    {arrayPokemonLimpio.map((pokemon, index) =>{
+      return(
+        <li>
+          <Link href="">
+          <a>
+              <div className={styles.card}>
+                <div className={styles.nombreTipos}>
+                  <div>
+                    {pokemon.types.map((tipo,index)=>{
+                      return (
+                        <p className={styles.tipo}>{tipo.type.name}</p>
+                      )
+                    })}
+                  </div>
+                </div>
+              </div>
+          </a>
+          </Link>
+        </li>
+      )
+    })}
+    </ul>
    </>
   )
 }
