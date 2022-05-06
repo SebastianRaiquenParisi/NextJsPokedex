@@ -17,6 +17,7 @@
 .nombreTipos p{
   margin:0;
   text-transform: capitalize;
+  margin-top: 3px;
 }
 .card{
   padding:15px;
@@ -24,7 +25,7 @@
   border-color: whitesmoke;
   position:relative;
   border-radius: 18px;
-  height:90px;
+  height:100px;
   color: #fff;
 }
 .imagen{

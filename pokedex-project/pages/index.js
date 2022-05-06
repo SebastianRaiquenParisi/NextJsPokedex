@@ -26,7 +26,7 @@ export default function Home({arrayPokemonLimpio}) {
                     })}
                   </div>
                 </div>
-                <img src={pokemon.image} height="100" width={100} className={styles.imagen}></img>
+                <img src={pokemon.image} height="110" width={110} className={styles.imagen}></img>
               </div>
           </a>
           </div>
@@ -60,7 +60,7 @@ export async function getServerSideProps(){
         image: pokemon.sprites.other.dream_world.front_default,
         types: pokemon.types,
         height: pokemon.height * 10,
-        weight: pokemon.weight / 10
+        weight: pokemon.weight /   10
       }
     )
   })
