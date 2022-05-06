@@ -3,10 +3,11 @@
 }
 .columnas{
   list-style:none;
-  padding:0;
+  padding-left: 5%;
   display: grid;
   gap:15px;
-  grid-template-columns: repeat(auto-fill, minmax(200px,1fr));
+  grid-template-columns: repeat(auto-fill, minmax(200px,23%));
+
 }
 .nombreTipos h3{
   font-size:1.2rem;

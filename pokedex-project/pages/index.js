@@ -3,13 +3,7 @@ import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import Link from 'next/link'
 
-export default function Pokemon({pokemon}){
-  return (
-    <div>
       
-    </div>
-  )
-}
 export default function Home({arrayPokemonLimpio}) {
   console.log("arrayPokemon", arrayPokemonLimpio)
   return (
@@ -18,7 +12,7 @@ export default function Home({arrayPokemonLimpio}) {
     {arrayPokemonLimpio.map((pokemon, index) =>{
       return(
         <li>
-          <Link href={{pathname: '/pokemon/[name]', query: {name: pokemon.name}}}>
+          <div onClick={()=>mostrarPokemon(pokemon)}>
           <a>
               <div className={`${styles.card} 
               ${pokemon.types[0].type.name}`}>
@@ -35,7 +29,7 @@ export default function Home({arrayPokemonLimpio}) {
                 <img src={pokemon.image} height="100" width={100} className={styles.imagen}></img>
               </div>
           </a>
-          </Link>
+          </div>
         </li>
       )
     })}
@@ -64,7 +58,9 @@ export async function getServerSideProps(){
         id : pokemon.id,
         name : pokemon.name,
         image: pokemon.sprites.other.dream_world.front_default,
-        types: pokemon.types
+        types: pokemon.types,
+        height: pokemon.height * 10,
+        weight: pokemon.weight / 10
       }
     )
   })
