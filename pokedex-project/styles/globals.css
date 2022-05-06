@@ -30,3 +30,33 @@ a {
 .normal{
   background: #a5a5a5;
 }
+.poison{
+  background: darkviolet;
+}
+.electric{
+  background: #DBA800;
+}
+.ground{
+  background: #BC815F;
+}
+.fairy{
+  background: pink;
+}
+.fighting{
+  background: brown;
+}
+.psychic{
+  background: #e75480;
+}
+.rock{
+  background: #654321;
+}
+.ghost{
+  background: #301934;
+}
+.ice{
+  background: lightblue;
+}
+.dragon{
+  background: violet;
+}

@@ -11,7 +11,7 @@ export default function Home({arrayPokemonLimpio}) {
     {arrayPokemonLimpio.map((pokemon, index) =>{
       return(
         <li>
-          <Link href="/">
+          <Link href={{pathname: '/pokemon/[name]', query: {name: pokemon.name}}}>
           <a>
               <div className={`${styles.card} 
               ${pokemon.types[0].type.name}`}>
@@ -46,7 +46,7 @@ export async function getServerSideProps(){
 
   let arrayPokemon = []
 
-  for(let i = 1; i<=20;i++){
+  for(let i = 1; i<=151;i++){
     let data = await traerPokemon(i);
     arrayPokemon.push(data);
   }
